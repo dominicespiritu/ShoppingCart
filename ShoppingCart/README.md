@@ -3,5 +3,4 @@
 ```bash
 $ ./gradlew test
 
-```command line
 \>gradlew test
