@@ -17,6 +17,15 @@ public class Product {
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public Product(String title, String productCode, double price) {
+		super();
+		this.title = title;
+		this.productCode = productCode;
+		this.price = price;
+	}
+
 
 	public Product(int id, String title, String description, String currency, String productCode, Date createdDate,
 			Date updatedDate, Boolean active, double price) {

@@ -6,16 +6,15 @@ import java.util.Map;
 public class ShoppingCart {
 	private int id;
 	private Subscriber subscriber;
-	private Map<Product, String> items;
+	private List<Product> items;
 	private PricingRules pricingRules;
 	private double total;
 	
 	public ShoppingCart() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public ShoppingCart(int id, Subscriber subscriber, Map<Product, String> items, PricingRules pricingRules,
-			double total) {
+
+	public ShoppingCart(int id, Subscriber subscriber, List<Product> items, PricingRules pricingRules, double total) {
 		super();
 		this.id = id;
 		this.subscriber = subscriber;
@@ -40,11 +39,11 @@ public class ShoppingCart {
 		this.subscriber = subscriber;
 	}
 
-	public Map<Product, String> getItems() {
+	public List<Product> getItems() {
 		return items;
 	}
 
-	public void setItems(Map<Product, String> items) {
+	public void setItems(List<Product> items) {
 		this.items = items;
 	}
 
@@ -64,18 +63,18 @@ public class ShoppingCart {
 		this.total = total;
 	}
 
-	public Map<Product, String> addItem(Product product, String promo_code){
+	public List<Product> addItem(Product product, String promo_code){
 		try {
-			items.put(product, promo_code);
+			items.add(product);
 		} catch (Exception e) {
 			return null;
 		}
 		return items;
 	}
 	
-	public Map<Product, String> addItem(Product product){
+	public List<Product> addItem(Product product){
 		try {
-			items.put(product, "");
+			items.add(product);
 		} catch (Exception e) {
 			return null;
 		}
